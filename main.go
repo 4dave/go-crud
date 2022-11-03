@@ -18,7 +18,7 @@ func main() {
 	r := gin.Default()
 	r.Use(cors.Default())
 	r.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"data": "Hello World"})
+		c.JSON(http.StatusOK, gin.H{"data": "Hello World!"})
 	})
 
 	// Notes
