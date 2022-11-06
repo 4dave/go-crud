@@ -21,6 +21,12 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"data": "Hello World!"})
 	})
 
+	// only for testing - allow from localhost
+	// r.Use(cors.New(cors.Config{
+	// 	AllowOrigins: []string{"http://localhost:3000", "http://localhost:3001"},
+	// 	AllowMethods: []string{"GET", "POST", "PATCH", "DELETE"},
+	// }))
+
 	// Notes
 	r.GET("/notes", controllers.GetNotes)
 	r.GET("/notes/:id", controllers.GetNote)
