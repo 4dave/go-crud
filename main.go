@@ -41,5 +41,12 @@ func main() {
 	r.PATCH("/todos/:id", controllers.UpdateTodo)
 	r.DELETE("/todos/:id", controllers.DeleteTodo)
 
+	// Contacts
+	r.GET("/contacts", controllers.GetContacts)
+	r.GET("/contacts/:id", controllers.GetContact)
+	r.POST("/contacts", controllers.CreateContact)
+	r.PATCH("/contacts/:id", controllers.UpdateContact)
+	r.DELETE("/contacts/:id", controllers.DeleteContact)
+
 	r.Run()
 }
